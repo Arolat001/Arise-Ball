@@ -23,8 +23,8 @@
             --bg-tertiary: #2a2a2a;
             --text-primary: #e0e0e0;
             --text-secondary: #999;
-            --accent-color: #ffd700;
-            --border-color: #ffd700;
+            --accent-color: #ffc72c;
+            --border-color: #f0f0f0;
             --card-bg: #1a1a1a;
         }
 
@@ -34,7 +34,7 @@
             --bg-tertiary: #f0f0f0;
             --text-primary: #f5f5f5;
             --text-secondary: #666;
-            --accent-color: #ff8c00;
+            --accent-color: #ffc72c;
             --border-color: #1a3a52;
             --card-bg: #1a3a52;
         }
@@ -56,7 +56,7 @@
             padding: 1rem 2rem;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             z-index: 1000;
-            border-bottom: 2px solid var(--accent-color);
+            /* border-bottom: 2px solid var(--accent-color); */
             transition: background 0.3s ease, border-color 0.3s ease;
         }
 
@@ -107,7 +107,7 @@
             font-weight: 600;
             transition: all 0.3s ease;
             font-size: 0.9rem;
-            margin-bottom: 2.5rem;
+            /* margin-bottom: 2.5rem; */
             margin-right: 5px;
         }
 
@@ -148,8 +148,7 @@
         @media (max-width: 768px) {
             .hamburger {
                 display: flex;
-                margin-bottom: 2rem;
-                margin-right: -4px;
+
             }
 
             .nav-links {
@@ -254,12 +253,7 @@
         .stat-card p {
             color: var(--text-primary);
         }
-        @media screen and (max-width: 768px) {
-            .container{
-                margin-top: 4rem;
-            }
-            
-        }
+
 
         /* About Section */
         #about {
@@ -570,7 +564,8 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#home" class="logo">⚽Arise&Shine FC</a>
+            <a href="#home" class="logo"> <img src="/Logo.jpg" alt="" width="30px" height="30px"
+                    style="border-radius: 50%;margin-left: -1rem;"> Arise&Shine FC</a>
             <ul class="nav-links" id="navLinks">
                 <a href="#home">Home</a>
                 <a href="#about">About the Team</a>
@@ -578,7 +573,7 @@
                 <a href="#fixtures">Fixtures & Results</a>
             </ul>
             <!-- Added theme toggle button -->
-            <button class="theme-toggle" id="themeToggle">🌙 Dark</button>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -644,16 +639,19 @@
                                 </div>
                                 <h4>John Smith</h4>
                                 <p>Manager</p>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi aperiam blanditiis sapiente neque iusto hic quo pariatur, laborum delectus illo.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi aperiam blanditiis
+                                    sapiente neque iusto hic quo pariatur, laborum delectus illo.</p>
                             </div>
-                          
+
                             <div class="member">
                                 <div class="member-image">
                                     <img src="/Di Gustine.png" alt="Mike Davis">
                                 </div>
                                 <h4>Mike Davis</h4>
                                 <p>Fitness Coach</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, quia? Delectus necessitatibus corrupti illo fugit laudantium consequuntur qui, non recusandae beatae quam veritatis praesentium dolores tempora enim maiores? Nemo, vel!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, quia? Delectus
+                                    necessitatibus corrupti illo fugit laudantium consequuntur qui, non recusandae
+                                    beatae quam veritatis praesentium dolores tempora enim maiores? Nemo, vel!</p>
                             </div>
                             <div class="member">
                                 <div class="member-image">
@@ -661,7 +659,8 @@
                                 </div>
                                 <h4>Emma Wilson</h4>
                                 <p>Medical Officer</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptate expedita deleniti animi cumque nihil quae perferendis facilis natus nemo.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptate expedita
+                                    deleniti animi cumque nihil quae perferendis facilis natus nemo.</p>
                             </div>
                         </div>
                     </div>
@@ -777,7 +776,7 @@
         const currentTheme = localStorage.getItem('theme') || 'dark';
         if (currentTheme === 'light') {
             body.classList.add('light-mode');
-            themeToggle.textContent = '☀️ Light';
+            themeToggle.textContent = '☀️';
         }
 
         // Theme toggle button click handler
@@ -786,7 +785,7 @@
             const isLightMode = body.classList.contains('light-mode');
 
             // Update button text and save preference
-            themeToggle.textContent = isLightMode ? '☀️ Light' : '🌙 Dark';
+            themeToggle.textContent = isLightMode ? '☀️' : '🌙';
             localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
         });
 
